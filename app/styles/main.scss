@@ -30,4 +30,31 @@ header {
     padding-left: 10px;
     margin-top: 0;
   }
-}  
+}
+
+.blockContent {
+  padding: 1rem;
+  transition: all 200ms ease-out;
+  &:nth-child(even) {
+    // background-color: rgba(0, 0, 0, 0.25);
+  }
+  &:nth-child(odd) {
+    // background-color: rgba(0, 0, 0, 0.125);
+  }
+  img {
+    border-radius: 0.25rem;
+    border: 2px solid white;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+    &:hover {
+      box-shadow: 0 0 1px 2px rgba(red, 0.25);
+    }
+  }
+}
+
+div form {
+  margin-bottom: 1rem;
+}
+
+.blockImages {
+  padding: 1rem;
+}

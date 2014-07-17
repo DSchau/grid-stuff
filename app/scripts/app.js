@@ -31,6 +31,10 @@ angular.module('gridStuffApp', [
       {
         label: 'Visibility',
         url: '#/visibility'
+      },
+      {
+        label: 'Block Grid',
+        url: '#/block'
       }
     ]
   }
@@ -63,6 +67,10 @@ angular.module('gridStuffApp', [
     .when('/visibility', {
       templateUrl: 'views/visibility.html',
       controller: 'VisibilityCtrl'
+    })
+    .when('/block', {
+      templateUrl: 'views/blockGrid.html',
+      controller: 'BlockGridCtrl'
     })
     .otherwise({
       redirectTo: '/'
