@@ -1,0 +1,20 @@
+<div class="row">
+	<div class="small-12 columns">
+		<table>
+			<thead>
+				<tr>
+					<td>Size</td>
+					<th>Min-width</th>
+					<th>Max-width</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="breakpoint in breakpoints">
+					<td>{{ breakpoint.label }}</td>
+					<td>{{ breakpoint.minWidth | emToPx }}</td>
+					<td>{{ breakpoint.maxWidth | emToPx }}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
