@@ -6,10 +6,10 @@ angular.module('gridStuffApp')
 		open: function(template, title, controller, items) {
 			return function() {
 				var modalInstance = $modal.open({
-          templateUrl: template,
-          controller: controller,
-          title: title
-        });
+          			templateUrl: template,
+          			controller: controller,
+          			title: title
+        		});
 			};
 		}
 	};

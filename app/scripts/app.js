@@ -89,10 +89,10 @@ angular.module('gridStuffApp', [
   $scope.$on('$routeChangeSuccess', function() {
     $scope.path = $location.path().substr(1);
 
-    $scope.open = modal.open('/views/modal/' + ($scope.path || 'main') + '.html', 'Source Code', 'ModalCtrl');
+    $scope.open = modal.open('views/modal/' + ($scope.path || 'main') + '.html', 'Source Code', 'ModalCtrl');
   });
 
-  $scope.open = modal.open('/views/modal/' + ($scope.path || 'main') + '.html', 'Source Code', 'ModalCtrl');
+  $scope.open = modal.open('views/modal/' + ($scope.path || 'main') + '.html', 'Source Code', 'ModalCtrl');
 })
 .controller('ModalCtrl', function() {
 
