@@ -3,26 +3,26 @@
   <div class="row">
     <div class="large-12 columns">
       <label>Input Label
-        <input ng-model="large12" type="text" placeholder="large-12.columns" />
+        <input ng-model="large12" type="text" placeholder="Enter whatever you feel like..." />
       </label>
     </div>
   </div>
   <div class="row">
     <div class="large-4 columns">
       <label>Input Label
-        <input ng-model="columns4Second" type="text" placeholder="large-4.columns" />
+        <input ng-model="columns4Second" type="text" placeholder="Enter text" />
       </label>
     </div>
     <div class="large-4 columns">
       <label>Input Label
-        <input ng-model="columns4" type="text" placeholder="large-4.columns" />
+        <input ng-model="columns4" type="text" placeholder="Enter something" />
       </label>
     </div>
     <div class="large-4 columns">
       <div class="row collapse">
         <label>Input Label</label>
         <div class="small-9 columns">
-          <input ng-model="columns9" type="text" placeholder="small-9.columns" />
+          <input ng-model="columns9" type="text" placeholder="Enter.. whatava" />
         </div>
         <div class="small-3 columns">
           <span class="postfix">.com</span>
@@ -45,19 +45,19 @@
   <div class="row">
     <div class="large-6 columns">
       <label>Choose Your Favorite</label>
-      <input ng-model="pokemon" type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Red</label>
-      <input ng-model="pokemon" type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Blue</label>
+      <input ng-model="pokemon['red']" type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Red</label>
+      <input ng-model="pokemon['blue']" type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Blue</label>
     </div>
     <div class="large-6 columns">
       <label>Check these out</label>
-      <input ng-model="checked" id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
-      <input ng-model="checked" id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
+      <input ng-model="checked[1]" id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
+      <input ng-model="checked[2]" id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
     </div>
   </div>
   <div class="row">
     <div class="large-12 columns">
       <label>Textarea Label
-        <textarea placeholder="small-12.columns"></textarea>
+        <textarea placeholder="This is a textarea"></textarea>
       </label>
     </div>
   </div>
@@ -68,10 +68,10 @@
   <div class="row">
     <div class="small-8">
       <div class="row">
-        <div class="medium-3 columns">
+        <div class="small-3 columns">
           <label for="right-label" class="right inline">Label</label>
         </div>
-        <div class="medium-9 columns">
+        <div class="small-9 columns">
           <input type="text" id="right-label" placeholder="Inline Text Input" ng-model="text">
         </div>
       </div>

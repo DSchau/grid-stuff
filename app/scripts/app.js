@@ -27,6 +27,10 @@ angular.module('gridStuffApp', [
       {
         label: 'Forms',
         url: '#/forms'
+      },
+      {
+        label: 'Visibility',
+        url: '#/visibility'
       }
     ]
   }
@@ -56,11 +60,32 @@ angular.module('gridStuffApp', [
       templateUrl: 'views/breakpoints.html',
       controller: 'BreakpointsCtrl'
     })
+    .when('/visibility', {
+      templateUrl: 'views/visibility.html',
+      controller: 'VisibilityCtrl'
+    })
     .otherwise({
       redirectTo: '/'
     });
 })
-.controller('AppCtrl', function($scope, navContent, sizesObj) {
+.controller('AppCtrl', function($scope, $location, navContent, sizesObj, modal) {
   $scope.navContent = navContent;
   $scope.sizesObj = sizesObj;
+
+  var upper = function(input) {
+    return input.substr(0, 1).toUpperCase() + input.substr(1);
+  };
+
+  $scope.path = $location.path().substr(1);
+
+  $scope.$on('$routeChangeSuccess', function() {
+    $scope.path = $location.path().substr(1);
+
+    $scope.open = modal.open('/views/modal/' + ($scope.path || 'main') + '.html', 'Source Code', 'ModalCtrl');
+  });
+
+  $scope.open = modal.open('/views/modal/' + ($scope.path || 'main') + '.html', 'Source Code', 'ModalCtrl');
+})
+.controller('ModalCtrl', function() {
+
 });

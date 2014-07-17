@@ -8,10 +8,9 @@
  * Controller of the gridStuffApp
  */
 angular.module('gridStuffApp')
-  .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+.controller('MainCtrl', function ($scope, modal) {
+	$scope.open = modal.open('views/modal/main.html', 'Source Code', 'ModalMainCtrl');
+})
+.controller('ModalMainCtrl', function() {
+
+});

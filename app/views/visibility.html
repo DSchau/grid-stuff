@@ -1,0 +1,56 @@
+<div class="row">
+	<div class="small-12 columns">
+		<p>Visibility classes are merely a way to show/hide content based on foundation supplied classes (which have media queries "behind the scenes"). Similarly to breakpoints, the established class names contain <code>small</code>, <code>medium</code>, <code>large</code>, <code>xlarge</code>, and <code>xxlarge</code>. Specifically, the class names are:</p>
+
+		<table>
+			<thead>
+				<tr>
+					<th>Size</th>
+					<th>Show Class</th>
+					<th>Hide Class</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="size in sizes">
+					<td>{{ size.size }}</td>
+					<td>{{ size.show }}</td>
+					<td>{{ size.hide }}</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<p>In addition, the classes (both show and hide) can be modified with the <code>up</code> suffix. For example, if you want to only show a particular element from medium breakpoints on up, the class name would be <code>show-for-medium-up</code>.</p>
+	</div>
+</div>
+
+<h3>Demo</h3>
+
+<div class="row">
+	<div class="medium-6 large-4 columns show-for-medium-up">
+		<div rc-groupbox>
+		    <div rc-groupbox-heading>
+		        Sample
+		    </div>
+		    <p>This is a groupbox that will be a tab on mobile</p>
+		</div>
+	</div>
+	<div class="medium-6 large-8 columns show-for-medium-up">
+		<div rc-groupbox>
+		    <div rc-groupbox-heading>
+		        Example
+		    </div>
+		    <p>This is a groupbox that will be a tab on mobile</p>
+		</div>
+	</div>
+	<div class="small-12 columns show-for-small-only">
+	<div rc-tabset>
+	        <div rc-tab heading="Sample">
+	        <p>This is a groupbox that will be a tab on mobile</p>
+	        </div>
+	        <div rc-tab>
+	            <div rc-tab-heading>Example</div>
+	            <p>This is a groupbox that will be a tab on mobile</p>
+	        </div>
+	    </div>
+	</div>
+</div>
